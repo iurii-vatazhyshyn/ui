@@ -20,6 +20,10 @@ const JobsPanelTable = ({
   match,
   section,
   selectedItem,
+  matches,
+  inputOnChange,
+  selectDropdownList,
+  selectOnChange,
   setSelectedItem
 }) => {
   const [editItem, setEditItem] = useState(false)
@@ -83,10 +87,14 @@ const JobsPanelTable = ({
       handleDelete={handleDelete}
       handleEdit={handleEdit}
       headers={headers}
+      inputOnChange={inputOnChange}
       match={match}
+      matches={matches}
       section={section}
+      selectDropdownList={selectDropdownList}
       selectedItem={selectedItem}
       setSelectedItem={setSelectedItem}
+      selectOnChange={selectOnChange}
     />
   )
 }
@@ -95,7 +103,11 @@ JobsPanelTable.defaultProps = {
   className: '',
   headers: [],
   handleDeleteItems: null,
-  handleSetSelectedVolume: null
+  handleSetSelectedVolume: null,
+  inputOnChange: () => {},
+  matches: [],
+  selectDropdownList: [],
+  selectOnChange: () => {}
 }
 
 JobsPanelTable.propTypes = {
@@ -109,9 +121,13 @@ JobsPanelTable.propTypes = {
   handleEditItems: PropTypes.func.isRequired,
   handleSetSelectedVolume: PropTypes.func,
   headers: PropTypes.arrayOf(PropTypes.shape({})),
+  inputOnChange: PropTypes.func,
   match: PropTypes.shape({}).isRequired,
+  matches: PropTypes.arrayOf(PropTypes.shape({})),
   section: PropTypes.string.isRequired,
+  selectDropdownList: PropTypes.arrayOf(PropTypes.shape({})),
   selectedItem: PropTypes.shape({}).isRequired,
+  selectOnChange: PropTypes.func,
   setSelectedItem: PropTypes.func.isRequired
 }
 

@@ -9,6 +9,31 @@
   align-items: center;
   width: 100%;
 
+  &-input {
+    background-color: transparent;
+    border: none;
+
+    &-edit {
+      height: 40px;
+      padding-top: -10px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+
+      .input-row__item {
+        .combobox-dropdown_visible {
+          .combobox-dropdown__search {
+            &-input {
+              border: none;
+            }
+          }
+        }
+      }
+
+      .combobox-input {
+        padding: 10px 0;
+      }
+    }
+  }
+
   &-list {
     min-width: 140px;
     margin: 0;

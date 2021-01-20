@@ -37,8 +37,13 @@ export const JobsPanelDataInputsTable = ({
       handleDeleteItems={handleDeleteItems}
       handleEditItems={handleEditItems}
       headers={panelData['data-inputs']['table-headers']}
+      inputOnChange={path => {
+        handlePathChange(path)
+      }}
       match={match}
+      matches={comboboxMatchesList}
       section="data-inputs"
+      selectDropdownList={comboboxSelectList}
       selectedItem={inputsState.selectedDataInput}
       setSelectedItem={selectedInput =>
         inputsDispatch({
@@ -46,6 +51,9 @@ export const JobsPanelDataInputsTable = ({
           payload: selectedInput
         })
       }
+      selectOnChange={path => {
+        handlePathTypeChange(path)
+      }}
     >
       {inputsState.addNewInput ? (
         <div className="table__row-add-item">

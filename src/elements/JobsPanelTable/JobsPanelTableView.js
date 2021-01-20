@@ -16,9 +16,13 @@ const JobsPanelTableView = ({
   handleDelete,
   handleEdit,
   headers,
+  inputOnChange,
   match,
+  matches,
   section,
+  selectDropdownList,
   selectedItem,
+  selectOnChange,
   setSelectedItem
 }) => {
   return (
@@ -46,8 +50,12 @@ const JobsPanelTableView = ({
           return section === 'data-inputs' ? (
             <EditableDataInputsRow
               handleEdit={handleEdit}
+              inputOnChange={inputOnChange}
               key={index}
+              matches={matches}
+              selectDropdownList={selectDropdownList}
               selectedDataInput={selectedItem}
+              selectOnChange={selectOnChange}
               setSelectedDataInput={setSelectedItem}
             />
           ) : section.includes('advanced') ? (
@@ -85,6 +93,13 @@ const JobsPanelTableView = ({
   )
 }
 
+JobsPanelTableView.defaultProps = {
+  inputOnChange: () => {},
+  matches: [],
+  selectDropdownList: [],
+  selectOnChange: () => {}
+}
+
 JobsPanelTableView.propTypes = {
   addNewItem: PropTypes.bool.isRequired,
   children: PropTypes.object.isRequired,
@@ -95,9 +110,13 @@ JobsPanelTableView.propTypes = {
   handleDelete: PropTypes.func.isRequired,
   handleEdit: PropTypes.func.isRequired,
   headers: PropTypes.array.isRequired,
+  inputOnChange: PropTypes.func,
   match: PropTypes.shape({}).isRequired,
+  matches: PropTypes.arrayOf(PropTypes.shape({})),
   section: PropTypes.string.isRequired,
+  selectDropdownList: PropTypes.arrayOf(PropTypes.shape({})),
   selectedItem: PropTypes.shape({}).isRequired,
+  selectOnChange: PropTypes.func,
   setSelectedItem: PropTypes.func.isRequired
 }
 
