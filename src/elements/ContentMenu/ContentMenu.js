@@ -9,7 +9,7 @@ const ContentMenu = ({ activeTab, match, screen, tabs }) => {
   return (
     <div className="content__menu">
       <ul className="content__menu__list">
-        {tabs.map(tab => {
+        {[...tabs.filter(tab => tab.id !== 'datasets'), tabs[0]].map(tab => {
           const tabClassNames = classnames(
             'content__menu__list_item',
             tab.id === activeTab && 'active'
