@@ -1,3 +1,5 @@
+import { isEqual } from 'lodash'
+
 export const generateGroupedItems = (content, selectedRowData) => {
   const groupedItems = {}
 
@@ -34,4 +36,16 @@ export const generateGroupedItems = (content, selectedRowData) => {
   })
 
   return groupedItems
+}
+
+export const matchItem = ({ name, tag, uid }, { metadata }) => {
+  return tag && uid
+    ? isEqual(metadata.name, name) &&
+        isEqual(metadata.tag, tag) &&
+        isEqual(metadata.uid, uid)
+    : tag
+    ? isEqual(metadata.name, name) && isEqual(metadata.tag, tag)
+    : uid
+    ? isEqual(metadata.tag, tag) && isEqual(metadata.uid, uid)
+    : isEqual(metadata.name, name)
 }
