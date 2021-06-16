@@ -34,6 +34,7 @@ const RegisterArtifactForm = ({ onChange, registerArtifactData, showType }) => {
         density="chunky"
         floatingLabel
         label="Name"
+        mandatory
         onChange={value =>
           onChange(prevData => ({
             ...prevData,
@@ -51,6 +52,7 @@ const RegisterArtifactForm = ({ onChange, registerArtifactData, showType }) => {
         density="chunky"
         floatingLabel
         label="Target Path"
+        mandatory
         onChange={value =>
           onChange(prevData => ({
             ...prevData,

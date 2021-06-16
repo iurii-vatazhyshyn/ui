@@ -25,6 +25,7 @@ const EditableVolumesRow = ({
             <Input
               floatingLabel
               label="Name"
+              mandatory
               onChange={name =>
                 setSelectedVolume({
                   ...selectedVolume,

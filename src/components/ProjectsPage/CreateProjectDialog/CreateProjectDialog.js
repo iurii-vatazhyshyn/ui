@@ -31,6 +31,7 @@ const CreateProjectDialog = ({
             className="pop-up-dialog__form-input"
             floatingLabel
             label="Name"
+            mandatory
             maxLength={63}
             onChange={setNewProjectName}
             required={isEmptyValue && projectStore.newProject.name.length === 0}

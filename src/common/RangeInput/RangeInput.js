@@ -15,6 +15,7 @@ const RangeInput = ({
   infoLabel,
   label,
   labelAtTop,
+  mandatory,
   max,
   min,
   onChange,
@@ -47,6 +48,7 @@ const RangeInput = ({
         floatingLabel={!labelAtTop && floatingLabel}
         infoLabel={infoLabel}
         label={!labelAtTop ? label : ''}
+        mandatory={mandatory}
         onChange={value => {
           setInputValue(value)
           onChange(value)
@@ -83,6 +85,7 @@ RangeInput.defaultProps = {
   infoLabel: false,
   label: '',
   labelAtTop: false,
+  mandatory: false,
   max: undefined,
   min: 0
 }
@@ -94,6 +97,7 @@ RangeInput.propTypes = {
   infoLabel: PropTypes.bool,
   label: PropTypes.string,
   labelAtTop: PropTypes.bool,
+  mandatory: PropTypes.bool,
   max: PropTypes.number,
   min: PropTypes.number,
   onChange: PropTypes.func.isRequired,

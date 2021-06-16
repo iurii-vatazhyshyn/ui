@@ -57,6 +57,7 @@ const EditableParametersRow = ({
           <div className="table__cell table__cell_edit">
             <Input
               density="dense"
+              mandatory
               onChange={name => {
                 setSelectedParameter({
                   ...selectedParameter,

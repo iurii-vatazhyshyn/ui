@@ -47,6 +47,7 @@ const EditableAdvancedRow = ({
         {table === 'env' ? (
           <Input
             density="dense"
+            mandatory
             onChange={name =>
               setSelectedItem({
                 ...selectedItem,

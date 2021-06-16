@@ -90,11 +90,19 @@
     background-color: transparent;
     pointer-events: none;
 
+    &-mandatory {
+      color: $amaranth;
+    }
+
     &.active-label {
       top: 9px;
       font-weight: 700;
       font-size: 10px;
       line-height: 12px;
+
+      .input__label-mandatory {
+        color: $topaz;
+      }
     }
 
     &-floating {

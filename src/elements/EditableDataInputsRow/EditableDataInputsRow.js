@@ -131,6 +131,7 @@ const EditableDataInputsRow = ({
           <Input
             className={inputNameClassNames}
             density="dense"
+            mandatory
             onChange={name => {
               setInputName(name)
               setSelectedDataInput({

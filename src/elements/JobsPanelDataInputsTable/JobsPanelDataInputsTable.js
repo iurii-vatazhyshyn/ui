@@ -58,6 +58,7 @@ export const JobsPanelDataInputsTable = ({
               density="medium"
               floatingLabel
               label="Input name"
+              mandatory
               onChange={name =>
                 inputsDispatch({
                   type: inputsActions.SET_NEW_INPUT_NAME,

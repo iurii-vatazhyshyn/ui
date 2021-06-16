@@ -84,8 +84,9 @@ const KeyValueTable = ({
                 />
               ) : (
                 <Input
-                  density="dense"
                   className="input_edit"
+                  density="dense"
+                  mandatory
                   onChange={key =>
                     setSelectedItem({
                       ...selectedItem,
@@ -174,6 +175,7 @@ const KeyValueTable = ({
               label={keyLabel}
               type="text"
               wrapperClassName="table-cell__key"
+              mandatory
               required={isKeyNotUnique(key, content)}
               requiredText="Name already exists"
             />

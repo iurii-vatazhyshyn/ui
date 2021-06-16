@@ -63,6 +63,7 @@ const FunctionsPanelCodeView = ({
           <Input
             floatingLabel
             label="Handler"
+            mandatory
             onChange={handleHandlerChange}
             onBlur={handleHandlerOnBlur}
             required={!isHandlerValid}

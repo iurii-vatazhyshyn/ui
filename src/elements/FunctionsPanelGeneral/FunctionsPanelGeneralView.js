@@ -41,9 +41,10 @@ const FunctionsPanelGeneralView = ({
           <Input
             floatingLabel
             label="Function Name"
+            mandatory
+            maxLength={63}
             onChange={handleNameChange}
             onBlur={handleNameOnBlur}
-            maxLength={63}
             required={!isNameValid}
             requiredText={
               data.name.length === 0

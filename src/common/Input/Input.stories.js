@@ -40,3 +40,35 @@ Chunky.args = {
   density: 'chunky',
   label: 'Chunky'
 }
+
+export const DenseMandatory = Template.bind({})
+DenseMandatory.args = {
+  ...commonArgs,
+  density: 'dense',
+  label: 'Mandatory',
+  mandatory: true
+}
+
+export const NormalMandatory = Template.bind({})
+NormalMandatory.args = {
+  ...commonArgs,
+  density: 'normal',
+  label: 'Mandatory',
+  mandatory: true
+}
+
+export const MediumMandatory = Template.bind({})
+MediumMandatory.args = {
+  ...commonArgs,
+  density: 'medium',
+  label: 'Mandatory',
+  mandatory: true
+}
+
+export const ChunkyMandatory = Template.bind({})
+ChunkyMandatory.args = {
+  ...commonArgs,
+  density: 'chunky',
+  label: 'Mandatory',
+  mandatory: true
+}

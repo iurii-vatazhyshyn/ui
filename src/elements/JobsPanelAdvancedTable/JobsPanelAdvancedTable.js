@@ -60,6 +60,7 @@ export const JobsPanelAdvancedTable = ({
                 density="medium"
                 floatingLabel
                 label="Name"
+                mandatory
                 onChange={setNewItemName}
                 required={isNameNotUnique(newName, content)}
                 requiredText="Name already exists"

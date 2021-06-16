@@ -41,9 +41,10 @@ const FeatureSetsPanelTitleView = ({
             className="panel-title__input"
             floatingLabel
             label="Feature Set Name"
+            mandatory
+            maxLength={63}
             onChange={handleNameChange}
             onBlur={handleNameOnBlur}
-            maxLength={63}
             pattern="^(?=[\S\s]{1,63}$)([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9]$"
             required={!isNameValid}
             requiredText={

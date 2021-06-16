@@ -56,6 +56,7 @@ const FeatureSetsPanelDataSourceView = ({
             className="data-source__inputs-item data-source__inputs-item_url"
             floatingLabel
             label="URL"
+            mandatory
             onBlur={handleUrlOnBlur}
             onChange={handleUrlOnChange}
             required={!isUrlValid}

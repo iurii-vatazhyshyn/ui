@@ -22,6 +22,7 @@ const Input = React.forwardRef(
       inputIcon,
       label,
       suggestionList,
+      mandatory,
       maxLength,
       onBlur,
       onChange,
@@ -140,6 +141,7 @@ const Input = React.forwardRef(
             }
           >
             {label}
+            {mandatory && <span className="input__label-mandatory"> *</span>}
           </label>
         )}
         {required && (
@@ -192,6 +194,7 @@ Input.defaultProps = {
   infoLabel: false,
   inputIcon: null,
   label: '',
+  mandatory: false,
   maxLength: null,
   onBlur: () => {},
   onChange: () => {},
@@ -214,6 +217,7 @@ Input.propTypes = {
   infoLabel: PropTypes.bool,
   inputIcon: PropTypes.element,
   label: PropTypes.string,
+  mandatory: PropTypes.bool,
   maxLength: PropTypes.number,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,

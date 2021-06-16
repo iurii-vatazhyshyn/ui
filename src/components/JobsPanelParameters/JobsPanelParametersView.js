@@ -73,6 +73,7 @@ const JobsPanelParametersView = ({
                   density="chunky"
                   floatingLabel
                   label="Name"
+                  mandatory
                   onChange={value =>
                     parametersDispatch({
                       type: parametersActions.SET_NEW_PARAMETER_NAME,
